@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SocialX</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="termsAndConditions"><u>Terms &amp; Conditions</u></string>
+    <string name="login">Login</string>
+
+    <!--    api key -->
+    <string name="api_key">55c221d18f3e4a28a454fa95fb6058ca</string>
+
+    <!--    Facebook app ID and Token-->
+    <string name="facebook_app_id">982501163156852</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">ddcee603e20ac85998e102bdf2795d87</string>
+    <string name="search_in_feeds">Search in feeds</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeContainer"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/blue"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="30dp"
+        android:elevation="4dp"
+        android:background="@drawable/search_bg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableStart="@drawable/search_icon"
+            android:hint="@string/search_in_feeds"
+            android:textColorHint="@color/newsText"
+            android:textColor="@color/newsText"
+            android:padding="10dp"
+            android:textSize="23sp"
+            android:focusable="false"/>
+
+<!--        <ImageButton-->
+<!--            android:background="@color/white"-->
+<!--            android:tooltipText="Logout"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:id="@+id/logoutBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/logout"-->
+<!--            -->
+<!--            android:layout_gravity="end" />-->
+    </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainContainerHome"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <ProgressBar
+        android:id="@+id/progressHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:indeterminateTint="@color/newsText"
+        android:visibility="gone"/>
+
+
+
+</LinearLayout>
