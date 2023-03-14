@@ -79,8 +79,10 @@ class Signup : Fragment() {
                 firebaseAuth.createUserWithEmailAndPassword(email.text.toString(), pass.text.toString()).addOnCompleteListener{
                     if(it.isSuccessful){
                         Toast.makeText(activity, "Resistration Successfull!!", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(activity, Home::class.java)
-                        startActivity(intent)
+                        val fragmentB = Login()
+                        requireActivity().supportFragmentManager.beginTransaction()
+                            .replace(R.id.container, fragmentB, "fragmentId")
+                            .commit();
                     }
                     else{
                         Toast.makeText(activity, it.exception.toString(), Toast.LENGTH_SHORT).show()

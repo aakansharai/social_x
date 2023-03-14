@@ -31,7 +31,6 @@ class Home : AppCompatActivity() {
         supportActionBar?.hide()
         getNews()
 
-
     }
 
     private fun getNews() {
@@ -42,13 +41,10 @@ class Home : AppCompatActivity() {
         new.enqueue(object : Callback<News>{
             override fun onResponse(call: Call<News>, response: Response<News>) {
                 val news = response.body()
-                Toast.makeText(this@Home, "Step1", Toast.LENGTH_SHORT).show()
-
                 if (news != null){
                     progress.visibility = View.GONE
                     newsList.visibility = View.VISIBLE
                     Log.d("AAKA", news.toString())
-                    Toast.makeText(this@Home, "Request success", Toast.LENGTH_SHORT).show()
                     adapter = NewsAdapter(this@Home, news!!.articles)
                     newsList.adapter = adapter
                     newsList.layoutManager = LinearLayoutManager(this@Home)
